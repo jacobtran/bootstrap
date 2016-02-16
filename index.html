@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+       async defer></script>
+
+    <script>
+      initMap = function() {
+        var myLocation =  new google.maps.LatLng(49.282270, -123.108509);
+
+        var mapProp = {
+          center:         myLocation,
+          zoom:           17,
+          scrollwheel:    false,
+          draggable:      false,
+          mapTypeId:      google.maps.MapTypeId.ROADMAP
+          };
+
+        var mapDiv =      document.getElementById('map');
+        var map =         new google.maps.Map(mapDiv, mapProp);
+
+        var marker =      new google.maps.Marker({
+          position:       myLocation,
+          icon:           "https://maps.google.com/mapfiles/kml/shapes/schools_maps.png",
+          animation:      google.maps.Animation.BOUNCE
+        });
+
+        marker.setMap(map);
+
+        var info = new google.maps.InfoWindow({content: "CodeCore"});
+        info.open(map, marker);
+      }
+
+      // google.maps.event.addDomListener(window, 'load', initMap);
+
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-left" href="#"><img src="images/logo.png" /></a>
+        <a class="navbar-brand navbar-left" href="#">Tufte Design Studios</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end of navigation -->
+
+    <!-- jumbotron -->
+    <div class="jumbotron text-center">
+      <h1>Tufte Design Studios</h1>
+      <p>Making Data Beautiful.</p>
+      <form>
+        <label for="newsletter">Subscribe to our newsletter:</label>
+        <input id="newsletter" name="newsletter" type="email" placeholder="Email Address" required>
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+    <!-- end of jumbotron -->
+
+    <!-- services -->
+    <div id="services" class="container text-center">
+      <h2>Services</h2>
+      <p>What We Offer</p>
+      <br>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="glyphicon glyphicon-off"></span>
+          <h4>Infographics</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="glyphicon glyphicon-hand-right"></span>
+          <h4>Logo Design</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="glyphicon glyphicon-heart"></span>
+          <h4>Print Design</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="glyphicon glyphicon-refresh"></span>
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="glyphicon glyphicon-lamp"></span>
+          <h4>Web Development</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <span class="glyphicon glyphicon-comment"></span>
+          <h4>Web Marketing</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end of services -->
+
+    <!-- portfoio -->
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+      <h2>Portfolio</h2>
+      <p>Explore Our Projects</p>
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio1.jpg" class="img-circle" />
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio2.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio3.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio4.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio5.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio6.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio7.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio8.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio9.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio10.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio11.jpg" class="img-circle"/>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <img src="images/portfolio12.jpg" class="img-circle"/>
+        </div>
+      </div>
+    </div>
+    <!-- end of portfolio -->
+
+    <!-- panels -->
+    <div id="pricing" class="container text-center">
+      <h2>Pricing</h2>
+      <p>Choose a design package that works for you.</p>
+
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading"><h3>Package A</h3></div>
+            <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+            <div class="panel-footer">
+              <h3>$1000</h3>
+              <button>Purchase</button>
+            </div>
+          </div> <!-- end panel  -->
+        </div> <!-- end media querie -->
+
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading"><h3>Package B</h3></div>
+            <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+            <div class="panel-footer">
+              <h3>$2000</h3>
+              <button>Purchase</button>
+            </div>
+          </div> <!-- end panel  -->
+        </div> <!-- end media querie -->
+
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading"><h3>Package C</h3></div>
+            <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+            <div class="panel-footer">
+              <h3>$3000</h3>
+              <button>Purchase</button>
+            </div>
+          </div> <!-- end panel  -->
+        </div> <!-- end media querie -->
+
+      </div> <!-- end row -->
+    </div> <!-- ends container -->
+
+    <!-- contact -->
+    <div id="contact" class="container">
+      <h2>Contact</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <p>Contact us and start your data beautification journey.</p>
+          <p>Vancouver, BC</p>
+          <p>604.555.5555</p>
+          <p>info@tufte.com</p>
+        </div>
+        <div class="col-sm-7">
+
+          <div class="form-group">
+            <form>
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              <textarea class="form-control" id="comments" name="comments" placeholder="Comments" row="5"></textarea>
+              <input class="btn btn-primary form-control" type="Submit" value="Send">
+             </form>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!-- end contact -->
+
+    <div id="map"></div>
+
+    <footer class="container text-center">
+      <a href="http://facebook.com"><i class="fa fa-facebook"></i></a>
+      <a href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+      <a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a>
+      <a href="http://plus.google.com"><i class="fa fa-google"></i></a>
+      <p>&copy; 2016, Create by Cohort 11</p>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+<!-- -->
